@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+  <!-- JS External -->
+  <script src="js/main.js" defer></script>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <title>Rock | Paper | Scissors</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="scorebosrd">
+      <div class="title">
+        <img src="images/logo-bonus.svg" alt="Logo">
+      </div>
+      <div class="score">
+        <p>
+          Score
+        </p>
+        <h1>0</h1>
+      </div>
+    </div>
+
+    <div class="hands">
+      <div class="hand paper">
+        <img src="images/icon-paper.svg" onclick="pickUserHand('paper')" alt="Paper">
+      </div>
+      <div class="hand scissors">
+        <img src="images/icon-scissors.svg" onclick="pickUserHand('scissors')" alt="scissors">
+      </div>
+      <div class="hand rock">
+        <img src="images/icon-rock.svg" onclick="pickUserHand('rock')" alt="rock">
+      </div>
+    </div>
+    <div class="contest">
+      <div class="userhand">
+        <h1>YOU PICKED</h1>
+        <div class="hand handImageContainer">
+          <img id="userPickImage" src="images/icon-paper.svg" onclick="pickUserHand('paper')" alt="Paper">
+        </div>
+
+      </div>
+      <div class="referee">
+        <div class="decision">
+          <h1>YOU WIN</h1>
+          <div class="newGame" onclick="restartGame()">PLAY AGAIN</div>
+        </div>
+      </div>
+      <div class="computerhand">
+        <h1>THE HOUSE PICKED</h1>
+        <div class="hand handImageContainer">
+          <img id="computerhand" src="images/icon-scissors.svg" onclick="pickUserHand('scissors')" alt="scissors">
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--End of wrapper -->
+
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">mdVital</a>.
+  </div>
+</body>
+
+</html>
